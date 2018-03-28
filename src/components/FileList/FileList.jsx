@@ -48,14 +48,16 @@ const FileList = (props) => {
           >
             <i className="fa fa-file file-icon" />
             <span className="file-name">{f.name}</span>
-            <div
-              className="progress-bar loading-progress-bar" 
-              style={{ width: `${f.download}%` }}
-            />
-            <div
-              className="progress-bar uploading-progress-bar" 
-              style={{ width: `${f.upload}%`}}
-            />
+            <div className="progress-bar-container">
+              <div
+                className="progress-bar loading-progress-bar" 
+                style={{ width: `${f.download}%` }}
+              />
+              <div
+                className="progress-bar uploading-progress-bar" 
+                style={{ width: `${f.upload}%`}}
+              />
+            </div>
             {renderStatusText(f)}
             <i
               className="fa fa-trash file-icon delete-file-icon"

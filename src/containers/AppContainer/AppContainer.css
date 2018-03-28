@@ -17,14 +17,17 @@
 }
 
 .upload-button {
-  width: 150px;
+  width: 125px;
   height: 48px;
   font-size: 0.7em;
-  background-color: #ccc;
+  color: #fff;
+  background-color: #393c41;
+  border: none;
+  border-radius: 5px;
 }
 
 .ready-to-upload {
-  background-color: aliceblue;
+  background-color: #468fc9;
   cursor: pointer;
 }
 

@@ -15,7 +15,8 @@ class AppContainer extends React.Component {
 
   handleFileUploadSuccess = (fileName) => {
     const files = { ...this.state.files };
-    files[fileName].status = FILE_STATUS.SUCCESS;    
+    files[fileName].status = FILE_STATUS.SUCCESS;
+    this.setState({ files });
   }
 
   handleFileUploadError = (fileName, errorMessage) => {
@@ -94,7 +95,7 @@ class AppContainer extends React.Component {
 
       axios(signedRequest).then(result => {
         // result.status === 200)
-        this.handleFileUploadSuccess(f);
+        this.handleFileUploadSuccess(f.name);
       }).catch(e => {
         let status = "";
         switch (e.response.status) {
@@ -123,8 +124,8 @@ class AppContainer extends React.Component {
             }
           >
             <span className="upload-button-content">
-              <span>Upload</span>
               <i className="fa fa-cloud-upload upload-button-icon"/>
+              <span>Upload</span>
             </span>
           </button>
         </div>

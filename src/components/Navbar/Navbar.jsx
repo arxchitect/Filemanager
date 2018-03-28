@@ -7,7 +7,9 @@ import logo from '../../assets/logo.png';
 const Navbar = (props) => (
   <div className="navbar">
     <img className="logo" src={logo} alt="brand logo" />
-    {props.showLogoutButton && <button className="logout-button" onClick={props.onLogout}>Log Out</button>}
+    {props.showLogoutButton && 
+      <i className="fa fa-sign-out logout-button" onClick={props.onLogout} />
+    }
   </div>
 )
 

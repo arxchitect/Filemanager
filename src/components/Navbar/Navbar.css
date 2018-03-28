@@ -6,7 +6,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #1f1f1f;
+  background-color: #393c41;
 }
 
 .logo {
@@ -16,8 +16,9 @@
 
 .logout-button {
   margin-right: 1em;
-  width: 100px;
-  height: 44px;
-  font-size: 0.7em;
-  background-color: #ccc;
+  color: #dc3334;
+  cursor: pointer;
+  background-color: #fff;
+  padding: 3px 3px 3px 5px;
+  border-radius: 5px;
 }
