@@ -1,0 +1,21 @@
+/*
+
+colors:
+#fff - text on dark background
+
+#1fcfcc - light blue
+#439aca - dark blue
+#ed6751 - ligth red
+#dc3334 - dark red
+
+#468fc9 -> #393c41 - radial gradient on logo
+
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetic Neue', sans-serif;
+  font-size: 24px;
+  background-color: #fff;
+}

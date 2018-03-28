@@ -1,0 +1,39 @@
+.app-container {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-bar {
+  width: 90%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.upload-button {
+  width: 150px;
+  height: 48px;
+  font-size: 0.7em;
+  background-color: #ccc;
+}
+
+.ready-to-upload {
+  background-color: aliceblue;
+  cursor: pointer;
+}
+
+.upload-button-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.upload-button-icon {
+  font-size: 1.5em;
+}
