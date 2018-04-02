@@ -79,10 +79,9 @@
   border-top: 7px solid #439aca;
 }
 
-.status-error .progress-bar-container .progress-bar {
-  border-top: 5px solid #dc3334;
-}
-
 .status-error {
   color: #dc3334;
+}
+.status-success {
+  color: #43ca77;
 }

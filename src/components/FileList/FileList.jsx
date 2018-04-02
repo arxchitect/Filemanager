@@ -15,9 +15,9 @@ const renderStatusText = (file) => {
       statusText = (<span><i className="fa fa-times-circle file-error"/> Upload Failed</span>);
       break;
     case FILE_STATUS.LOADING:
-      statusText = (file.downloadProgress !== 100) ?
-        `${file.downloadProgress}% loaded`
-        : `${file.uploadProgress}% uploaded`;
+      statusText = (file.download !== 100) ?
+        `${file.download}% loaded`
+        : `${file.upload}% uploaded`;
       break;
     case FILE_STATUS.READY:
     default:
@@ -48,16 +48,18 @@ const FileList = (props) => {
           >
             <i className="fa fa-file file-icon" />
             <span className="file-name">{f.name}</span>
-            <div className="progress-bar-container">
-              <div
-                className="progress-bar loading-progress-bar" 
-                style={{ width: `${f.download}%` }}
-              />
-              <div
-                className="progress-bar uploading-progress-bar" 
-                style={{ width: `${f.upload}%`}}
-              />
-            </div>
+            { f.status === FILE_STATUS.LOADING &&
+              <div className="progress-bar-container">
+                <div
+                  className="progress-bar loading-progress-bar" 
+                  style={{ width: `${f.download}%` }}
+                />
+                <div
+                  className="progress-bar uploading-progress-bar" 
+                  style={{ width: `${f.upload}%`}}
+                />
+              </div>
+            }
             {renderStatusText(f)}
             <i
               className="fa fa-trash file-icon delete-file-icon"

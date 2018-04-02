@@ -60,7 +60,7 @@ class AppContainer extends React.Component {
       const reader = new FileReader();
       reader.onload = (e) => {
         const files = { ...this.state.files };
-        files[selectedFile.name].data = reader.result;
+        files[selectedFile.name].data = btoa(reader.result);
         files[selectedFile.name].status = FILE_STATUS.READY;
         this.setState({ files });
       };
@@ -83,7 +83,7 @@ class AppContainer extends React.Component {
         path: `/production/uva-file-uploads/${f.name}`,
         headers: {
           "Content-Type": f.type,
-          "Content-Length": f.size
+          "Content-Length": f.data.length
         },
         onUploadProgress: (e) => this.handleProgress(f.name, "upload", e)
       };
